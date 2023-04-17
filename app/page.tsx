@@ -16,7 +16,7 @@ export default function Home() {
       id="homePage"
       className="min-h-[100dvh] px-7 items-center grid grid-cols-4 bg-primary"
     >
-      <div className="col-span-2 col-start-1 row-span-2 row-start-1 text-center ">
+      <div className="col-span-2 col-start-1 row-span-2 row-start-1 overflow-x-hidden text-center ">
         <iframe
           className="w-full rounded-2xl"
           src="https://www.smg.gov.mo/zh"
