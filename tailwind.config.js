@@ -1,18 +1,51 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './app/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-    },
+    extend: {},
   },
-  plugins: [],
-}
+  daisyui: {
+    daisyui: {
+      styled: true,
+      themes: true,
+      base: true,
+      utils: true,
+      logs: true,
+      rtl: false,
+      prefix: "daisyui",
+      darkTheme: "dark",
+    },
+    themes: [
+      {
+        mytheme: {
+          primary: "#107562",
+
+          secondary: "#fee01f",
+
+          accent: "#10b981",
+
+          neutral: "#242838",
+
+          "base-100": "#32373E",
+
+          info: "#6BC9F5",
+
+          success: "#78E8C5",
+
+          warning: "#F0BE19",
+
+          error: "#EC3022",
+        },
+      },
+    ],
+  },
+  plugins: [
+    "@tailwindcss/typography",
+    require("tailwind-scrollbar"),
+    require("daisyui"),
+  ],
+};
