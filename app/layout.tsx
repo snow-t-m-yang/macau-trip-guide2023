@@ -14,9 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-primary">
       <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
-      <body className="max-w-3xl mx-auto ">
+      <body className="max-w-3xl mx-auto">
         {children}
-        <ul className="fixed bottom-[10%] left-0 right-0 w-fit menu bg-white/20 backdrop-blur-3xl menu-horizontal rounded-box">
+        <ul className="fixed bottom-[10%] inset-x-0 w-fit menu bg-white/20 backdrop-blur-3xl menu-horizontal rounded-box">
           <Link href="/info">
             <li>
               <a>

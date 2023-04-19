@@ -49,10 +49,11 @@ export default function Home() {
           </ul>
         </div>
         <div className="col-span-4 col-start-1 row-span-3 text-center">
-          <iframe
-            className="w-full h-80 rounded-2xl"
-            src="https://motransportinfo.com/zh/search#2"
-          />
+          <div className="w-full border h-72 group">
+            <div className="relative w-full h-full shadow-xl rounded-xl">
+              <Image src="/quiz/quiz-thankyou.jpg" fill alt="thank you image" />
+            </div>
+          </div>
         </div>
       </div>
     </main>
