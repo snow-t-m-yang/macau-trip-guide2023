@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Inter } from "next/font/google";
+import Flip from "./components/Flip";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,12 +49,9 @@ export default function Home() {
             </Link>
           </ul>
         </div>
+        {/* Flip card */}
         <div className="col-span-4 col-start-1 row-span-3 text-center">
-          <div className="w-full border h-72 group">
-            <div className="relative w-full h-full shadow-xl rounded-xl">
-              <Image src="/quiz/quiz-thankyou.jpg" fill alt="thank you image" />
-            </div>
-          </div>
+          <Flip />
         </div>
       </div>
     </main>
