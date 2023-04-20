@@ -36,9 +36,9 @@ module.exports = {
 
           success: "#78E8C5",
 
-          warning: "#F0BE19",
+          warning: "transparent",
 
-          error: "#EC3022",
+          error: "#fff",
         },
       },
     ],
