@@ -1,7 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Inter } from "next/font/google";
-import Flip from "./components/Flip";
+import FlipSliders from "./components/FlipSliders";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +11,10 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main id="homePage" className="bg-primary min-h-[100dvh] p-7">
+    <main
+      id="homePage"
+      className="bg-primary min-h-[100dvh] p-7 max-w-md  mx-auto"
+    >
       <div className="grid items-center grid-cols-4 gap-7">
         <div className="col-span-2 col-start-1 row-span-2 row-start-1 text-center ">
           <iframe
@@ -51,7 +53,8 @@ export default function Home() {
         </div>
         {/* Flip card */}
         <div className="col-span-4 col-start-1 row-span-3 text-center">
-          <Flip />
+          <FlipSliders />
+          <p>粵語小教室</p>
         </div>
       </div>
     </main>
