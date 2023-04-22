@@ -56,7 +56,7 @@ export default function RootLayout({
       <body className="max-w-3xl mx-auto text-white">
         {children}
         <div className="fixed inset-x-0 bottom-0 flex w-full mx-auto">
-          <ul className="flex justify-center w-full gap-5 py-3 text-2xl bg-white/20 backdrop-blur-3xl menu-horizontal">
+          <ul className="flex justify-center w-full gap-5 py-3 text-3xl bg-white/20 backdrop-blur-3xl menu-horizontal">
             <li onClick={() => dispatch({ type: "info" })}>
               <Link href="/info">
                 {state.info ? <AiFillInfoCircle /> : <AiOutlineInfoCircle />}
@@ -75,7 +75,7 @@ export default function RootLayout({
             <ul
               className={`${
                 state.calendar ? "right-0" : "right-[-100%]"
-              } group absolute w-full bg-success text-base-100 grid grid-cols-5 p-3  bottom-[100%] duration-500 divide-x divide-black/20`}
+              } absolute w-full bg-white/20 text-white flex justify-between p-3  bottom-[100%] duration-500  divide-black/20 text-xl `}
             >
               <li>
                 <a href="/day1">Day1</a>
@@ -96,14 +96,12 @@ export default function RootLayout({
           </ul>
         </div>
 
-        <footer className="p-10 bg-primary footer footer-center text-base-content">
+        <footer className="p-10 mt-10 bg-primary footer footer-center text-base-content">
           <div className="grid grid-flow-col gap-4">
-            <a className="link link-hover">需帶物品</a>
-            <a className="link link-hover">飯店資訊</a>
             <a className="link link-hover">航班資訊</a>
+            <a className="link link-hover">飯店資訊</a>
             <a className="link link-hover">聯繫方式</a>
           </div>
-
           <div>
             <p>Copyright © 2023 - All right reserved by Snow Yang</p>
           </div>

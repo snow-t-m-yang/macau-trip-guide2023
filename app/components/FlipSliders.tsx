@@ -100,7 +100,11 @@ const FlipSliders = () => {
     <div className="w-full carousel rounded-box">
       {FlipSlidersSource.map((slider) => {
         return (
-          <div className="w-full carousel-item" id={slider.cantonese}>
+          <div
+            key={slider.alt}
+            className="w-full carousel-item"
+            id={slider.cantonese}
+          >
             <div
               onClick={() => setIsFlipped(!isFlipped)}
               className="w-full h-72 group [perspective:1000px]"
