@@ -36,7 +36,7 @@ module.exports = {
 
           success: "#78E8C5",
 
-          warning: "transparent",
+          warning: "#EC3022",
 
           error: "#fff",
         },

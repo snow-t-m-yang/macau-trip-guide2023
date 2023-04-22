@@ -13,7 +13,7 @@ const CheckListSource: CheckListType[] = [
     id: uuidv4(),
   },
   {
-    item: "台胞證",
+    item: "臺胞證",
     id: uuidv4(),
   },
   {
@@ -41,40 +41,40 @@ const page = () => {
   }, [checkedItem]);
 
   return (
-    <section className="grid w-full px-3 py-3 min-h-[100dvh] ">
+    <section className="grid w-full text-center px-3 py-3 gap-5 min-h-[100dvh] ">
       {/* CheckList */}
       {!allChecked && (
-        <div className="border-t-2 border-secondary bg-accent shadow-3xl rounded-xl">
-          <table
-            className={`table-accent rounded-xl border-separate border-spacing-x-12 border-spacing-y-5`}
-          >
-            <thead className="">
-              <tr>
-                <th className="text-3xl ">最後檢查</th>
-              </tr>
-            </thead>
-            <tbody>
-              {CheckListSource.map((listItem) => (
-                <tr key={listItem.id}>
-                  <th>
-                    <label className="flex items-center gap-5">
-                      <input
-                        type="checkbox"
-                        onChange={(e) => handleIsChecked(e.target.checked)}
-                        className="border-white shadow-inner checkbox"
-                      />
-                      <div className="text-2xl font-bold ">{listItem.item}</div>
-                    </label>
-                  </th>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div>
+          <h2 className="text-3xl">最後檢查</h2>
+          <div className="py-5 bg-white/20 shadow-3xl rounded-xl">
+            <table
+              className={`table-accent rounded-xl border-separate border-spacing-x-12 border-spacing-y-2 mx-auto`}
+            >
+              <tbody className="flex flex-col justify-center w-full ">
+                {CheckListSource.map((listItem) => (
+                  <tr key={listItem.id}>
+                    <th>
+                      <label className="flex items-center gap-5">
+                        <input
+                          type="checkbox"
+                          onChange={(e) => handleIsChecked(e.target.checked)}
+                          className="border-white shadow-inner checkbox"
+                        />
+                        <div className="text-2xl font-bold ">
+                          {listItem.item}
+                        </div>
+                      </label>
+                    </th>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 
       <div>
-        <h2 className="text-3xl text-center">航班資訊</h2>
+        <h2 className="text-3xl ">航班資訊</h2>
         <iframe
           className="w-full h-56 rounded-2xl"
           src="https://aviability.com/flight-number/flight-nx615-air-macau"
@@ -82,7 +82,7 @@ const page = () => {
       </div>
 
       {/* Hotel */}
-      <div className="text-center">
+      <div>
         <h2 className="text-3xl">飯店資訊</h2>
         <p>聯絡電話：+853 2836 1999</p>
         <h3>飯店地址</h3>
