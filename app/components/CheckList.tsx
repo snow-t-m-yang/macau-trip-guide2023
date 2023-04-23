@@ -67,7 +67,7 @@ const CheckList = () => {
                   onChange={(e) =>
                     handleIsChecked(e.target.checked, listItem.id)
                   }
-                  className="border-white shadow-inner checkbox"
+                  className="border-white shadow-inner"
                 />
                 <div className="text-2xl font-bold ">{listItem.item}</div>
               </label>
