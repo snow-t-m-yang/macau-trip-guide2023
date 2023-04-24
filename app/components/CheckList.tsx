@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import { v4 as uuidv4 } from "uuid";
 
 type CheckListType = {
@@ -27,14 +28,19 @@ const CheckListSource: CheckListType[] = [
 ];
 
 const CheckList = () => {
-  const [checkedList, setCheckedList] =
-    useState<CheckListType[]>(CheckListSource);
+  const [checkedList, setCheckedList] = useState<CheckListType[]>(() => {
+    const checkedListData = localStorage.getItem("checkedList_state");
+    return checkedListData !== null
+      ? JSON.parse(checkedListData)
+      : CheckListSource;
+  });
 
   const handleIsChecked = (checked: boolean, id: string) => {
     console.log(checked);
     const updatedList = checkedList.map((item) => {
       if (item.id === id) {
-        return { ...item, checked: !checked };
+        console.log(checked);
+        return { ...item, checked: !item.checked };
       }
       return item;
     });
@@ -42,16 +48,9 @@ const CheckList = () => {
     setCheckedList(updatedList);
   };
 
-  // useEffect(() => {
-  //   localStorage.setItem("checkedList_state", JSON.stringify(checkedList));
-  // }, [checkedList]);
-
-  // useEffect(() => {
-  //   const checkedListData = localStorage.getItem("checkedList_state");
-  //   if (checkedListData !== null) {
-  //     setCheckedList(JSON.parse(checkedListData));
-  //   }
-  // }, []);
+  useEffect(() => {
+    localStorage.setItem("checkedList_state", JSON.stringify(checkedList));
+  }, [checkedList]);
 
   return (
     <div className="space-y-3">
@@ -67,9 +66,9 @@ const CheckList = () => {
                   onChange={(e) =>
                     handleIsChecked(e.target.checked, listItem.id)
                   }
-                  className="border-white shadow-inner"
+                  className=""
                 />
-                <div className="text-2xl font-bold ">{listItem.item}</div>
+                <div className="text-2xl font-bold">{listItem.item}</div>
               </label>
             </li>
           ))}
