@@ -29,7 +29,6 @@ const Day2Map = () => {
       </a>
 
       <Image
-        className=""
         src="/day2/day2-map.png"
         width={500}
         height={500}

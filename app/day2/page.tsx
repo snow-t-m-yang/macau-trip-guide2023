@@ -5,17 +5,11 @@ import {
   magemiaoParagraph,
   xinmaluParagraph,
   zhengjiaParagraph,
-} from "../day2/descriptions";
+} from "@/descriptions";
 import Day2Map from "../components/Day2Map";
+import { DayInfo } from "../day3/page";
 
-type Day2 = {
-  place: string;
-  image: string;
-  description: string[];
-  id: string;
-};
-
-const day2Data: Day2[] = [
+const day2Data: DayInfo[] = [
   {
     place: "大三巴",
     image: "/day2/day2-dasanba.jpeg",
@@ -48,7 +42,7 @@ const Day2page = () => {
       <Day2Map />
       {day2Data.map((data) => (
         <div className="px-3 space-y-9" key={data.id}>
-          <h2 id={data.place} className="text-5xl text-secondary">
+          <h2 id={data.place} className="text-5xl font-semibold text-secondary">
             {data.place}
           </h2>
           <Image

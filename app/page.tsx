@@ -20,7 +20,7 @@ export default function Home() {
           />
         </div>
         <div className="col-span-4 row-span-2 px-2 py-5 bg-white/20 backdrop-blur-3xl rounded-xl">
-          <ul className="w-full mx-auto text-2xl steps">
+          <ul className="w-full mx-auto text-2xl font-bold steps">
             <Link href="/day1">
               <li data-content="🛬" className="step step-secondary">
                 Day1

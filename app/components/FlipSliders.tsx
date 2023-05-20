@@ -116,7 +116,9 @@ const FlipSliders = () => {
               >
                 <div className="absolute inset-0  w-full h-full  [backface-visibility:hidden]">
                   <div className="flex flex-col items-center justify-center h-full bg-accent text-secondary ">
-                    <p className="text-xl">Level: {slider.level}</p>
+                    <p className="text-xl font-semibold">
+                      Level: {slider.level}
+                    </p>
                     <h2 className="text-7xl">{slider.cantonese}</h2>
                   </div>
                 </div>
