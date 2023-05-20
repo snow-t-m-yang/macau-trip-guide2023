@@ -1,8 +1,5 @@
 import Link from "next/link";
-import { Inter } from "next/font/google";
 import FlipSliders from "./components/FlipSliders";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "澳港五日遊",
