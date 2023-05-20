@@ -1,42 +1,64 @@
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
+import {
+  dasanbaParagraph,
+  magemiaoParagraph,
+  xinmaluParagraph,
+  zhengjiaParagraph,
+} from "@/descriptions";
+import Day2Map from "../components/Day2Map";
+import { DayInfo } from "../day3/page";
 
-type Day2 = {
-  place: string;
-  image: string;
-  description: string;
-  id: string;
-};
+const day2Data: DayInfo[] = [
+  {
+    place: "大三巴",
+    image: "/day2/day2-dasanba.jpeg",
+    description: dasanbaParagraph,
+    id: uuidv4(),
+  },
+  {
+    place: "新馬路",
+    image: "/day2/day2-xinmalu.jpg",
+    description: xinmaluParagraph,
+    id: uuidv4(),
+  },
+  {
+    place: "媽閣廟",
+    image: "/day2/day2-mage.jpeg",
+    description: magemiaoParagraph,
+    id: uuidv4(),
+  },
+  {
+    place: "鄭家大屋",
+    image: "/day2/day2-zhengjia.jpeg",
+    description: zhengjiaParagraph,
+    id: uuidv4(),
+  },
+];
 
 const Day2page = () => {
   return (
-    <section className="grid w-full  px-3 py-3 gap-5 min-h-[100dvh] ">
-      <h1>Day 2</h1>
-
-      <div className="space-y-3">
-        <h2 className="text-3xl ">新馬路</h2>
-
-        <Image
-          src="/day2/day2-xinmalu.jpg"
-          width={500}
-          height={500}
-          alt="新馬路"
-          className="rounded-2xl"
-        />
-      </div>
-
-      {/* Hotel */}
-      <div>
-        <h2 className="text-3xl">飯店資訊</h2>
-        <p>聯絡電話：+853 2836 1999</p>
-
-        <div>
-          <iframe
-            className="z-0 w-full h-56 rounded-2xl"
-            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Hotel%20Drag%C3%A3o%20Dourado+(Macau%20trip)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          ></iframe>
+    <section className="grid w-full gap-9">
+      <Day2Map />
+      {day2Data.map((data) => (
+        <div className="px-3 space-y-9" key={data.id}>
+          <h2 id={data.place} className="text-5xl font-semibold text-secondary">
+            {data.place}
+          </h2>
+          <Image
+            src={data.image}
+            width={500}
+            height={500}
+            alt={data.place}
+            className="rounded-2xl"
+          />
+          <div className="space-y-5 text-xl">
+            {data.description.map((paragraph) => (
+              <p key={uuidv4()}>{paragraph}</p>
+            ))}
+          </div>
         </div>
-      </div>
+      ))}
     </section>
   );
 };

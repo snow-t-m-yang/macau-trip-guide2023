@@ -1,4 +1,4 @@
 const Day4page = () => {
-  return <div>Day4page</div>;
+  return <div></div>;
 };
 export default Day4page;

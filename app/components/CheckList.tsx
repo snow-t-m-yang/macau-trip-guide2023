@@ -36,10 +36,8 @@ const CheckList = () => {
   });
 
   const handleIsChecked = (checked: boolean, id: string) => {
-    console.log(checked);
     const updatedList = checkedList.map((item) => {
       if (item.id === id) {
-        console.log(checked);
         return { ...item, checked: !item.checked };
       }
       return item;

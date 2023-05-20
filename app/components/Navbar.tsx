@@ -35,7 +35,12 @@ const Navbar = () => {
       case "info":
         return { home: false, info: true, calendar: false };
       case "calendar":
-        return { home: false, info: false, calendar: true };
+        if (state.calendar === false) {
+          return { home: false, info: false, calendar: true };
+        } else {
+          return { home: false, info: false, calendar: false };
+        }
+
       default:
         throw new Error();
     }
@@ -44,8 +49,8 @@ const Navbar = () => {
   const [state, dispatch] = useReducer(reducer, navbarStates);
 
   return (
-    <div className="fixed inset-x-0 bottom-0 flex w-full mx-auto">
-      <ul className="flex justify-center w-full gap-5 py-3 text-3xl bg-white/20 backdrop-blur-3xl menu-horizontal">
+    <div className="fixed inset-x-0 bottom-0 flex w-full mx-auto text-primary">
+      <ul className="flex justify-center w-full gap-5 py-3 text-3xl bg-white/80 backdrop-blur-xl menu-horizontal">
         <li onClick={() => dispatch({ type: "info" })}>
           <Link href="/info">
             {state.info ? <AiFillInfoCircle /> : <AiOutlineInfoCircle />}
@@ -64,7 +69,7 @@ const Navbar = () => {
         <ul
           className={`${
             state.calendar ? "right-0" : "right-[-100%]"
-          } absolute w-full bg-white/20 text-white flex justify-between p-3  bottom-[100%] duration-500  divide-black/20 text-xl `}
+          } absolute w-full bg-secondary/90 flex justify-between p-3  bottom-[100%] duration-500 font-bold  divide-black/20 text-xl `}
         >
           <li>
             <Link href="/day1">Day1</Link>

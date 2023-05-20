@@ -8,7 +8,7 @@ const page = () => {
         <h2 className="text-3xl ">航班資訊</h2>
         <iframe
           className="w-full h-56 rounded-2xl"
-          src="https://aviability.com/flight-number/flight-nx615-air-macau"
+          src="https://www.airportia.com/flights/nx615/taipei/taipa/"
         ></iframe>
       </div>
 
