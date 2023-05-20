@@ -1,4 +1,12 @@
 import Image from "next/image";
+import { v4 as uuidv4 } from "uuid";
+
+type Day2 = {
+  place: string;
+  image: string;
+  description: string;
+  id: string;
+};
 
 const Day2page = () => {
   return (
