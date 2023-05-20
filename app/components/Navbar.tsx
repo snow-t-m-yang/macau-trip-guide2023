@@ -69,7 +69,7 @@ const Navbar = () => {
         <ul
           className={`${
             state.calendar ? "right-0" : "right-[-100%]"
-          } absolute w-full bg-white/80 backdrop-blur-xl  flex justify-between p-3  bottom-[100%] duration-500  divide-black/20 text-xl `}
+          } absolute w-full bg-secondary flex justify-between p-3  bottom-[100%] duration-500  divide-black/20 text-xl `}
         >
           <li>
             <Link href="/day1">Day1</Link>
