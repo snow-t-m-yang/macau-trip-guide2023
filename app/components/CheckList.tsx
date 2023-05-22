@@ -1,13 +1,7 @@
 "use client";
+import { CheckListType } from "@/type";
 import { useState, useEffect } from "react";
-import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import { v4 as uuidv4 } from "uuid";
-
-type CheckListType = {
-  id: string;
-  item: string;
-  checked: boolean;
-};
 
 const CheckListSource: CheckListType[] = [
   {
@@ -51,8 +45,8 @@ const CheckList = () => {
   }, [checkedList]);
 
   return (
-    <div className="space-y-3">
-      <h2 className="text-3xl">最後檢查</h2>
+    <div id="最後檢查" className="w-full space-y-3 ">
+      <h2 className="text-3xl text-secondary">最後檢查</h2>
       <div className="inset-x-0 grid w-full py-5 place-items-center bg-white/20 shadow-3xl rounded-xl">
         <ul className="flex flex-col items-start gap-3 w-fit">
           {checkedList.map((listItem) => (
@@ -64,9 +58,11 @@ const CheckList = () => {
                   onChange={(e) =>
                     handleIsChecked(e.target.checked, listItem.id)
                   }
-                  className=""
+                  className="checkbox checkbox-accent"
                 />
-                <div className="text-2xl font-bold">{listItem.item}</div>
+                <div className="text-3xl font-semibold text-white">
+                  {listItem.item}
+                </div>
               </label>
             </li>
           ))}

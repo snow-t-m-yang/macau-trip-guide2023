@@ -9,13 +9,7 @@ import {
   yongliParagraph,
 } from "@/descriptions";
 import Day2Map from "../components/Day2Map";
-
-export type DayInfo = {
-  place: string;
-  image: string;
-  description: string[];
-  id: string;
-};
+import { DayInfo } from "@/type";
 
 const day3MorningData: DayInfo[] = [
   {
@@ -67,11 +61,13 @@ const day3AfternoonData: DayInfo[] = [
 
 const Day3page = () => {
   return (
-    <section className="grid w-full gap-9">
+    <section className="grid w-full px-3 gap-9">
       <div className="min-h-[100dvh] flex flex-col justify-center gap-5">
-        <h1 className="py-2 text-7xl bg-secondary text-neutral">自由行日</h1>
+        <h1 className="py-2 text-7xl bg-secondary text-primary">自由行日</h1>
         <div className="text-3xl">
-          <p>今天我和紓寧要去找我哥。所以就請阿姨和哥哥自由行一天。</p>
+          <p className="text-white/80">
+            今天我和紓寧要去找我哥。所以就請阿姨和哥哥自由行一天。
+          </p>
         </div>
         <div className="space-y-5 text-3xl">
           <h2 className="text-4xl font-bold">推薦行程：</h2>
@@ -113,13 +109,15 @@ const Day3page = () => {
           >
             {data.place}
           </h2>
-          <iframe
-            src={data.image}
-            width={450}
-            height={500}
-            loading="lazy"
-            className="rounded-md "
-          />
+          <div>
+            <iframe
+              src={data.image}
+              width={350}
+              height={400}
+              loading="lazy"
+              className="rounded-md "
+            />
+          </div>
           <div className="space-y-5 text-xl">
             {data.description.map((paragraph) => (
               <li className="px-3 text-2xl italic" key={uuidv4()}>

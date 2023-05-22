@@ -7,7 +7,7 @@ import {
   zhengjiaParagraph,
 } from "@/descriptions";
 import Day2Map from "../components/Day2Map";
-import { DayInfo } from "../day3/page";
+import { DayInfo } from "@/type";
 
 const day2Data: DayInfo[] = [
   {
@@ -38,10 +38,13 @@ const day2Data: DayInfo[] = [
 
 const Day2page = () => {
   return (
-    <section className="grid w-full gap-9">
-      <Day2Map />
+    <section className="grid w-full px-3 gap-9">
+      <div className="min-h-[100dvh] flex flex-col justify-center gap-5">
+        <h1 className="py-2 text-7xl bg-secondary text-primary">名勝古跡日</h1>
+        <Day2Map />
+      </div>
       {day2Data.map((data) => (
-        <div className="px-3 space-y-9" key={data.id}>
+        <div className="space-y-9" key={data.id}>
           <h2 id={data.place} className="text-5xl font-semibold text-secondary">
             {data.place}
           </h2>

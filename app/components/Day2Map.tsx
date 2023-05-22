@@ -33,6 +33,7 @@ const Day2Map = () => {
         width={500}
         height={500}
         alt="day2-map"
+        className="rounded-md"
       ></Image>
     </div>
   );

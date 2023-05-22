@@ -2,20 +2,22 @@ import CheckList from "../components/CheckList";
 
 const page = () => {
   return (
-    <section className="grid w-full text-center px-3 py-3 gap-5 min-h-[100dvh] ">
+    <section className="flex px-3 text-secondary flex-col items-center justify-center w-full gap-10 min-h-[100dvh] ">
       <CheckList />
-      <div className="space-y-3">
-        <h2 className="text-3xl ">航班資訊</h2>
+      <div className="w-full space-y-3">
+        <h2 className="text-3xl">航班資訊</h2>
         <iframe
-          className="w-full h-56 rounded-2xl"
+          className="w-full rounded-2xl h-72"
           src="https://www.airportia.com/flights/nx615/taipei/taipa/"
         ></iframe>
       </div>
 
       {/* Hotel */}
-      <div>
-        <h2 className="text-3xl">飯店資訊</h2>
-        <p>聯絡電話：+853 2836 1999</p>
+      <div className="w-full space-y-3">
+        <div>
+          <h2 className="text-3xl">飯店資訊</h2>
+          <p>聯絡電話：+853 2836 1999</p>
+        </div>
 
         <div>
           <iframe
