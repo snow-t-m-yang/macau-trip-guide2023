@@ -10,3 +10,9 @@ export type CheckListType = {
   item: string;
   checked: boolean;
 };
+
+export type CardProps = {
+  place: string;
+  image: string;
+  description: string[];
+};

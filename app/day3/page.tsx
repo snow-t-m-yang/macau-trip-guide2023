@@ -4,12 +4,14 @@ import {
   baliParagraph,
   luyoutaParagraph,
   meigaoParagraph,
+  taipaParagraph,
   weinisiParagraph,
   xinpujinParagraph,
   yongliParagraph,
 } from "@/descriptions";
 import Day2Map from "../components/Day2Map";
 import { DayInfo } from "@/type";
+import Card from "../components/Card";
 
 const day3MorningData: DayInfo[] = [
   {
@@ -64,15 +66,15 @@ const Day3page = () => {
     <section className="flex flex-col justify-center px-3 gap-9">
       <div className="min-h-[100dvh] flex flex-col justify-center gap-5">
         <h1 className="py-2 text-7xl bg-secondary text-primary">自由行日</h1>
-        <div className="text-3xl">
+        <div className="text-2xl">
           <p className="text-white/80">
             今天我和紓寧要去找我哥。所以就請阿姨和哥哥自由行一天。
           </p>
         </div>
-        <div className="space-y-5 text-3xl">
-          <h2 className="text-4xl font-bold">推薦行程：</h2>
+        <div className="space-y-5 text-2xl">
+          <h2 className="text-3xl font-bold">推薦行程：</h2>
           <p>
-            <span className="text-4xl font-semibold">上午</span>逛逛
+            <span className="text-3xl font-semibold">上午</span>逛逛
             <a className="italic text-secondary" href="#新葡京">
               新葡京、
             </a>
@@ -84,13 +86,13 @@ const Day3page = () => {
             </a>
           </p>
           <p>
-            <span className="text-4xl font-semibold">中午</span>在旅遊塔上吃
+            <span className="text-3xl font-semibold">中午</span>在旅遊塔上吃
             <a className="italic text-secondary" href="#旅遊塔">
               自助餐。
             </a>
           </p>
           <p>
-            <span className="text-4xl font-semibold">下午</span>去路氹金光大道
+            <span className="text-3xl font-semibold">下午</span>去路氹金光大道
             <a className="italic text-secondary" href="#威尼斯人">
               威尼斯人、
             </a>
@@ -112,7 +114,7 @@ const Day3page = () => {
           <div>
             <iframe
               src={data.image}
-              width={350}
+              width={370}
               height={350}
               loading="lazy"
               className="rounded-md "
@@ -128,6 +130,14 @@ const Day3page = () => {
         </div>
       ))}
 
+      <Card
+        place={"氹仔"}
+        image={
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29562.42868886495!2d113.5479714490163!3d22.152513101342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346dd7b72306f6c7%3A0x43300794e4b996aa!2sTaipa!5e0!3m2!1sen!2stw!4v1684742938607!5m2!1sen!2stw"
+        }
+        description={taipaParagraph}
+      />
+
       {day3AfternoonData.map((data) => (
         <div className="flex flex-col items-center space-y-9" key={data.id}>
           <h2
@@ -138,7 +148,7 @@ const Day3page = () => {
           </h2>
           <iframe
             src={data.image}
-            width={350}
+            width={370}
             height={350}
             loading="lazy"
             className="rounded-md "
