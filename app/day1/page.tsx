@@ -7,7 +7,7 @@ const page = () => {
       <div className="w-full space-y-3">
         <h2 className="text-5xl">航班資訊</h2>
         <iframe
-          className="w-full rounded-2xl h-72"
+          className="w-full bg-white rounded-2xl h-72"
           src="https://www.airportia.com/flights/nx615/taipei/taipa/"
         ></iframe>
       </div>

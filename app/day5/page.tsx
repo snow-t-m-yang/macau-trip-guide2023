@@ -1,7 +1,8 @@
 import { v4 as uuidv4 } from "uuid";
 import Image from "next/image";
 import { DayInfo } from "@/type";
-import { andrewParagraph } from "@/descriptions";
+import { andrewParagraph, luhuanParagraph } from "@/descriptions";
+import Card from "../components/Card";
 
 const Day5page = () => {
   const day5Data: DayInfo[] = [
@@ -22,13 +23,19 @@ const Day5page = () => {
           </p>
         </div>
       </div>
-      <div className="w-full space-y-5 text-secondary">
+      <div className="w-full space-y-5 bg-white text-secondary">
         <h2 className="text-5xl">航班資訊</h2>
         <iframe
           className="w-full rounded-2xl h-72"
           src="https://www.airportia.com/flights/nx618/taipa/taipei/"
         ></iframe>
       </div>
+      <Card
+        place={"路環"}
+        image={"/islands/islands-luhuan.png"}
+        description={luhuanParagraph}
+      />
+
       {day5Data.map((data) => (
         <div className="px-3 space-y-9" key={data.id}>
           <h2 id={data.place} className="text-5xl font-semibold text-secondary">
@@ -41,7 +48,7 @@ const Day5page = () => {
             alt={data.place}
             className="rounded-2xl"
           />
-          <div className="space-y-5 text-xl">
+          <div className="space-y-5 text-2xl">
             {data.description.map((paragraph) => (
               <p key={uuidv4()}>{paragraph}</p>
             ))}
