@@ -46,7 +46,7 @@ const CheckList = () => {
 
   return (
     <div id="最後檢查" className="w-full space-y-3 ">
-      <h2 className="text-3xl text-secondary">最後檢查</h2>
+      <h2 className="text-5xl text-secondary">最後檢查</h2>
       <div className="inset-x-0 grid w-full py-5 place-items-center bg-white/20 shadow-3xl rounded-xl">
         <ul className="flex flex-col items-start gap-3 w-fit">
           {checkedList.map((listItem) => (

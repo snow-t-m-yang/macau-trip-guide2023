@@ -47,8 +47,8 @@ const Day5page = () => {
         </div>
       ))}
 
-      <div>
-        <h2>航班資訊</h2>
+      <div className="w-full space-y-3 text-secondary">
+        <h2 className="text-5xl">航班資訊</h2>
         <iframe
           className="w-full rounded-2xl h-72"
           src="https://www.airportia.com/flights/nx618/taipa/taipei/"

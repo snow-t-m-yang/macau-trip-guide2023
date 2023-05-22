@@ -14,7 +14,7 @@ const day4Data: DayInfo[] = [
 
 const Day4page = () => {
   return (
-    <section className="grid w-full gap-9">
+    <section className="flex flex-col justify-center px-3 gap-9">
       <div className="min-h-[100dvh] flex flex-col justify-center gap-5">
         <h1 className="py-2 text-7xl bg-secondary text-primary">香港日</h1>
         <div className="text-3xl">
@@ -64,8 +64,8 @@ const Day4page = () => {
           </h2>
           <iframe
             src={data.image}
-            width={450}
-            height={500}
+            width={350}
+            height={300}
             loading="lazy"
             className="rounded-md "
           />
