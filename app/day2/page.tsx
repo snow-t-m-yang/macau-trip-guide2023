@@ -23,15 +23,15 @@ const day2Data: DayInfo[] = [
     id: uuidv4(),
   },
   {
-    place: "媽閣廟",
-    image: "/day2/day2-mage.jpeg",
-    description: magemiaoParagraph,
-    id: uuidv4(),
-  },
-  {
     place: "鄭家大屋",
     image: "/day2/day2-zhengjia.jpeg",
     description: zhengjiaParagraph,
+    id: uuidv4(),
+  },
+  {
+    place: "媽閣廟",
+    image: "/day2/day2-mage.jpeg",
+    description: magemiaoParagraph,
     id: uuidv4(),
   },
 ];
@@ -52,7 +52,7 @@ const Day2page = () => {
             alt={data.place}
             className="rounded-2xl"
           />
-          <div className="space-y-5 text-xl">
+          <div className="space-y-5 text-2xl">
             {data.description.map((paragraph) => (
               <p key={uuidv4()}>{paragraph}</p>
             ))}
