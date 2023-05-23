@@ -60,7 +60,10 @@ const CheckList = () => {
                   }
                   className="checkbox checkbox-accent"
                 />
-                <div className="text-3xl font-semibold text-white">
+                <div
+                  style={{ filter: "drop-shadow(0 0 10px)" }}
+                  className="text-3xl text-white"
+                >
                   {listItem.item}
                 </div>
               </label>

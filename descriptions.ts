@@ -64,7 +64,7 @@ export const weinisiParagraph = weinisi.split("\n");
 
 //! 巴黎人
 
-export const baliParagraph = ["澳門巴黎人埃菲爾鐵塔"];
+export const baliParagraph = ["假埃菲爾鐵塔"];
 
 //?========================day5=========================
 

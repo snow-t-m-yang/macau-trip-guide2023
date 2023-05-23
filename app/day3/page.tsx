@@ -73,34 +73,54 @@ const Day3page = () => {
         </div>
         <div className="space-y-5 text-2xl">
           <h2 className="text-3xl font-bold">推薦行程：</h2>
-          <p>
-            <span className="text-3xl font-semibold">上午</span>逛逛
-            <a className="italic text-secondary" href="#新葡京">
-              新葡京、
-            </a>
-            <a className="italic text-secondary" href="#永利">
-              永利、
-            </a>
-            <a className="italic text-secondary" href="#美高梅">
-              美高梅。
-            </a>
-          </p>
-          <p>
-            <span className="text-3xl font-semibold">中午</span>在旅遊塔上吃
-            <a className="italic text-secondary" href="#旅遊塔">
-              自助餐。
-            </a>
-          </p>
-          <p>
-            <span className="text-3xl font-semibold">下午</span>去路氹金光大道
-            <a className="italic text-secondary" href="#威尼斯人">
-              威尼斯人、
-            </a>
-            <a className="italic text-secondary" href="#巴黎人">
-              巴黎人
-            </a>
-            等世界頂級賭場。
-          </p>
+          <div className="space-y-2 ">
+            <p>
+              <span
+                style={{ filter: "drop-shadow(0 0 8px)" }}
+                className="text-3xl font-semibold"
+              >
+                上午
+              </span>
+              逛逛
+              <a className="italic text-secondary" href="#新葡京">
+                新葡京、
+              </a>
+              <a className="italic text-secondary" href="#永利">
+                永利、
+              </a>
+              <a className="italic text-secondary" href="#美高梅">
+                美高梅。
+              </a>
+            </p>
+            <p>
+              <span
+                style={{ filter: "drop-shadow(0 0 8px)" }}
+                className="text-3xl font-semibold"
+              >
+                中午
+              </span>
+              在旅遊塔上吃
+              <a className="italic text-secondary" href="#旅遊塔">
+                自助餐。
+              </a>
+            </p>
+            <p>
+              <span
+                style={{ filter: "drop-shadow(0 0 8px)" }}
+                className="text-3xl font-semibold"
+              >
+                下午
+              </span>
+              去路氹金光大道
+              <a className="italic text-secondary" href="#威尼斯人">
+                威尼斯人、
+              </a>
+              <a className="italic text-secondary" href="#巴黎人">
+                巴黎人
+              </a>
+              等世界頂級賭場。
+            </p>
+          </div>
         </div>
       </div>
       {day3MorningData.map((data) => (

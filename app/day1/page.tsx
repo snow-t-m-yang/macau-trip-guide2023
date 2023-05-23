@@ -2,7 +2,15 @@ import CheckList from "../components/CheckList";
 
 const page = () => {
   return (
-    <section className="flex px-3 text-secondary flex-col items-center justify-center w-full gap-10 min-h-[100dvh] ">
+    <section className="flex px-3 text-center text-secondary flex-col items-center justify-center w-full gap-10 min-h-[100dvh] ">
+      <div className="min-h-[100dvh] text-start flex flex-col justify-center gap-5">
+        <h1 className="py-2 text-7xl bg-secondary text-primary">啟程日</h1>
+        <div className="text-3xl">
+          <p className="text-white" style={{ filter: "drop-shadow(0 0 10px)" }}>
+            希望各位能有一趟輕鬆之餘具有啟發性的旅程。
+          </p>
+        </div>
+      </div>
       <CheckList />
       <div className="w-full space-y-3">
         <h2 className="text-5xl">航班資訊</h2>

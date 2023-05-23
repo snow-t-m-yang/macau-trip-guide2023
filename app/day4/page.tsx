@@ -130,7 +130,7 @@ const Day4page = () => {
         id="港島"
         className="min-h-[100dvh] flex flex-col justify-center gap-5"
       >
-        <h1 className="py-2 text-5xl text-secondary">港島</h1>
+        <h1 className="py-2 text-center text-7xl text-secondary">港島</h1>
 
         <div className="relative text-sm text-white">
           <a
@@ -209,7 +209,7 @@ const Day4page = () => {
         id="九龍"
         className="min-h-[100dvh] flex flex-col justify-center gap-5"
       >
-        <h1 className="py-2 text-5xl text-secondary">九龍</h1>
+        <h1 className="py-2 text-center text-7xl text-secondary">九龍</h1>
 
         <div className="relative text-sm text-white">
           <a
