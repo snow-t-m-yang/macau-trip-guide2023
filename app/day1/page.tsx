@@ -11,7 +11,9 @@ const page = () => {
           </p>
         </div>
       </div>
-      <CheckList />
+
+      {/* <CheckList /> */}
+
       <div className="w-full space-y-3">
         <h2 className="text-5xl">航班資訊</h2>
         <iframe
