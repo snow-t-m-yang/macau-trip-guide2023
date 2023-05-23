@@ -15,8 +15,10 @@ const Card = ({ place, image, description }: CardProps) => {
         className="rounded-xl"
       ></Image>
 
-      {description.map((paragraph) => (
-        <p className="text-2xl">{paragraph}</p>
+      {description.map((paragraph, index) => (
+        <p key={index} className="text-2xl">
+          {paragraph}
+        </p>
       ))}
     </div>
   );
