@@ -28,7 +28,7 @@ useEffect(() => {
 
 const CheckList = () => {
   const [checkedList, setCheckedList] = useState<CheckListType[]>(() => {
-    if (window !== undefined) {
+    if (typeof window !== undefined) {
       const checkedListData = localStorage.getItem("checkedList_state");
       return checkedListData !== null
         ? JSON.parse(checkedListData)
