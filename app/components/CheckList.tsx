@@ -23,11 +23,14 @@ const CheckListSource: CheckListType[] = [
 
 const CheckList = () => {
   const [checkedList, setCheckedList] = useState<CheckListType[]>(() => {
-    if (typeof window === "undefined") return CheckListSource;
-    const checkedListData = localStorage.getItem("checkedList_state");
-    return checkedListData !== null
-      ? JSON.parse(checkedListData)
-      : CheckListSource;
+    if (typeof window !== "undefined") {
+      const checkedListData = localStorage.getItem("checkedList_state");
+      return checkedListData !== null
+        ? JSON.parse(checkedListData)
+        : CheckListSource;
+    }
+
+    return CheckListSource;
   });
 
   const handleIsChecked = (checked: boolean, id: string) => {
