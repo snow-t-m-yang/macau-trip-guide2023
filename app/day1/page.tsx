@@ -1,4 +1,4 @@
-import CheckList from "../components/CheckList";
+// import CheckList from "../components/CheckList";
 
 const page = () => {
   return (
