@@ -23,10 +23,10 @@ const Day5page = () => {
           </p>
         </div>
       </div>
-      <div className="w-full space-y-5 bg-white text-secondary">
+      <div className="w-full space-y-5 text-secondary">
         <h2 className="text-5xl">航班資訊</h2>
         <iframe
-          className="w-full rounded-2xl h-72"
+          className="w-full bg-white rounded-2xl h-72"
           src="https://www.airportia.com/flights/nx618/taipa/taipei/"
         ></iframe>
       </div>

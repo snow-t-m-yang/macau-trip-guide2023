@@ -17,41 +17,40 @@ const Day4page = () => {
     <section className="flex flex-col justify-center px-3 gap-9">
       <div className="min-h-[100dvh] flex flex-col justify-center gap-5">
         <h1 className="py-2 text-7xl bg-secondary text-primary">香港日</h1>
-        <div className="text-3xl">
-          <p className="text-white/80">
-            今天我和紓寧要去找我哥。所以就請阿姨和哥哥自由行一天。
-          </p>
-        </div>
-        <div className="space-y-5 text-3xl">
-          <h2 className="text-4xl font-bold">推薦行程：</h2>
-          <p>
-            <span className="text-4xl font-semibold">上午</span>逛逛
-            <a className="italic text-secondary" href="#新葡京">
-              新葡京、
-            </a>
-            <a className="italic text-secondary" href="#永利">
-              永利、
-            </a>
-            <a className="italic text-secondary" href="#美高梅">
-              美高梅。
-            </a>
-          </p>
-          <p>
-            <span className="text-4xl font-semibold">中午</span>在旅遊塔上吃
-            <a className="italic text-secondary" href="#旅遊塔">
-              自助餐。
-            </a>
-          </p>
-          <p>
-            <span className="text-4xl font-semibold">下午</span>去路氹金光大道
-            <a className="italic text-secondary" href="#威尼斯人">
-              威尼斯人、
-            </a>
-            <a className="italic text-secondary" href="#巴黎人">
-              巴黎人
-            </a>
-            等世界頂級賭場。
-          </p>
+        <div className="text-3xl"></div>
+        <div className="relative text-white">
+          <a
+            className="absolute rounded-md px-1 py-2 left-[155px] top-[10px] bg-accent/80 backdrop-blur-xl"
+            href="#大三巴"
+          >
+            大三巴
+          </a>
+          <a
+            className="absolute rounded-md px-1 py-2 left-[115px] top-[65px] bg-accent/80 backdrop-blur-xl"
+            href="#新馬路"
+          >
+            新馬路
+          </a>
+          <a
+            className="absolute rounded-md px-1 py-2 left-[65px] bottom-[75px] bg-accent/80 backdrop-blur-xl"
+            href="#鄭家大屋"
+          >
+            鄭家大屋
+          </a>
+          <a
+            className="absolute rounded-md px-1 py-2 left-[5px] bottom-[22px] bg-accent/80 backdrop-blur-xl"
+            href="#媽閣廟"
+          >
+            媽閣廟
+          </a>
+
+          <Image
+            src="/day2/day2-map.png"
+            width={500}
+            height={500}
+            alt="day2-map"
+            className="rounded-md"
+          ></Image>
         </div>
       </div>
       {day4Data.map((data) => (
