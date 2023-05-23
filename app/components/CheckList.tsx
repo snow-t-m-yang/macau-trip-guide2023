@@ -21,12 +21,19 @@ const CheckListSource: CheckListType[] = [
   },
 ];
 
+useEffect(() => {
+  // Perform localStorage action
+  const item = localStorage.getItem("key");
+}, []);
+
 const CheckList = () => {
   const [checkedList, setCheckedList] = useState<CheckListType[]>(() => {
-    const checkedListData = localStorage.getItem("checkedList_state");
-    return checkedListData !== null
-      ? JSON.parse(checkedListData)
-      : CheckListSource;
+    if (window !== undefined) {
+      const checkedListData = localStorage.getItem("checkedList_state");
+      return checkedListData !== null
+        ? JSON.parse(checkedListData)
+        : CheckListSource;
+    }
   });
 
   const handleIsChecked = (checked: boolean, id: string) => {
