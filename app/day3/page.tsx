@@ -140,13 +140,14 @@ const Day3page = () => {
               className="rounded-md "
             />
           </div>
-          <div className="space-y-5 text-xl">
+          <ul className="space-y-5 text-xl">
             {data.description.map((paragraph) => (
               <li className="px-3 text-2xl italic" key={uuidv4()}>
+                <span className="not-italic">🎰 </span>
                 {paragraph}
               </li>
             ))}
-          </div>
+          </ul>
         </div>
       ))}
 
@@ -171,13 +172,14 @@ const Day3page = () => {
             loading="lazy"
             className="rounded-md "
           />
-          <div className="space-y-5 text-xl">
+          <ul className="space-y-5 text-xl">
             {data.description.map((paragraph) => (
               <li className="px-3 text-2xl italic" key={uuidv4()}>
+                <span className="not-italic">🎰 </span>
                 {paragraph}
               </li>
             ))}
-          </div>
+          </ul>
         </div>
       ))}
     </section>
