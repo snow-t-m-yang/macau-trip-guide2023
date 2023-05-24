@@ -14,7 +14,7 @@ const page = () => {
 
       {/* <CheckList /> */}
       <div className="min-h-[100dvh] text-2xl flex flex-col justify-center gap-5">
-        <h2 className="text-center  text-7xl text-secondary">澳門</h2>
+        <h2 className="text-center text-7xl text-secondary">澳門🇲🇴</h2>
         <div className="space-y-5 text-white text-start">
           <p>
             葡萄牙語：Macau，全稱澳門特別行政區

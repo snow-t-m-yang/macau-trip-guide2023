@@ -42,31 +42,33 @@ const infoData: InfoType[] = [
     id: uuidv4(),
   },
   {
-    name: "🚌 澳門巴士",
-    description: "澳門巴士路線",
-    url: "https://motransportinfo.com/zh/search",
+    name: "📞 澳門區號",
+    description: "+853",
+    url: "https://www.google.com/search?q=%E6%BE%B3%E9%96%80%E5%8D%80%E8%99%9F&sourceid=chrome&ie=UTF-8",
     id: uuidv4(),
   },
 ];
 
 const Infopage = () => {
   return (
-    <div className="flex flex-col justify-center min-h-screen px-3">
-      {infoData.map((data) => (
-        <Accordion id={data.id} type="single" collapsible>
-          <AccordionItem value={data.name}>
-            <AccordionTrigger className="text-3xl text-secondary">
-              {data.name}
-            </AccordionTrigger>
-            <AccordionContent className="text-xl">
-              <p>{data.description}</p>
-              <Link className="text-info" href={data.url}>
-                👉 網址
-              </Link>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      ))}
+    <div className="flex flex-col justify-center min-h-screen gap-5 px-3">
+      <h1 className="text-5xl">💁🏻‍♂️ 相關資訊</h1>
+      <div>
+        {infoData.map((data) => (
+          <Accordion id={data.id} type="single" collapsible>
+            <AccordionItem value={data.name}>
+              <AccordionTrigger className="text-3xl text-secondary">
+                {data.name}
+              </AccordionTrigger>
+              <AccordionContent className="text-xl">
+                <Link className="text-info" href={data.url}>
+                  {data.description}
+                </Link>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        ))}
+      </div>
     </div>
   );
 };
