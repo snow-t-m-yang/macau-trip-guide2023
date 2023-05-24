@@ -55,7 +55,7 @@ const Infopage = () => {
       <h1 className="text-5xl">💁🏻‍♂️ 相關資訊</h1>
       <div>
         {infoData.map((data) => (
-          <Accordion id={data.id} type="single" collapsible>
+          <Accordion key={data.id} type="single" collapsible>
             <AccordionItem value={data.name}>
               <AccordionTrigger className="text-3xl text-secondary">
                 {data.name}
