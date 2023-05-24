@@ -229,13 +229,13 @@ const Day4page = () => {
           </a>
           <a
             className="absolute rounded-md px-1 py-2 right-[70px] bottom-[17px] bg-accent/80 backdrop-blur-xl"
-            href="#星光"
+            href="#星光大道"
           >
             星光大道
           </a>
           <a
             className="absolute rounded-md px-1 py-2 right-[65px] bottom-[120px] bg-accent/80 backdrop-blur-xl"
-            href="#妹記"
+            href="#妹記大排檔"
           >
             妹記大排檔
           </a>

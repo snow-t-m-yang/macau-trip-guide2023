@@ -26,7 +26,7 @@ const infoData: InfoType[] = [
   {
     name: "🏨 飯店",
     description: "澳門金龍酒店",
-    url: "https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Hotel%20Drag%C3%A3o%20Dourado+(Macau%20trip)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed",
+    url: "https://www.google.com/maps/place/Hotel+Golden+Dragon/@22.1953393,113.5544119,17z/data=!4m9!3m8!1s0x34017adc711a5c6f:0xdd83eeee2237167a!5m2!4m1!1i2!8m2!3d22.1953393!4d113.5544119!16s%2Fg%2F155rpnbs",
     id: uuidv4(),
   },
   {
@@ -51,7 +51,7 @@ const infoData: InfoType[] = [
 
 const Infopage = () => {
   return (
-    <div className="flex flex-col justify-center min-h-screen gap-5 px-3">
+    <div className="flex flex-col justify-start min-h-screen gap-5 px-3 pt-9">
       <h1 className="text-5xl">💁🏻‍♂️ 相關資訊</h1>
       <div>
         {infoData.map((data) => (
@@ -61,7 +61,7 @@ const Infopage = () => {
                 {data.name}
               </AccordionTrigger>
               <AccordionContent className="text-xl">
-                <Link className="text-info" href={data.url}>
+                <Link className="text-info" target="blank" href={data.url}>
                   {data.description}
                 </Link>
               </AccordionContent>
