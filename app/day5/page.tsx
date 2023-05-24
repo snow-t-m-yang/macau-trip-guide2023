@@ -19,7 +19,7 @@ const Day5page = () => {
         <h1 className="py-2 text-7xl bg-secondary text-primary">回程日</h1>
         <div className="text-3xl">
           <p className="text-white/80">
-            今天很Child。早上可以先去機場寄放行李，然後氹仔逛逛，中午去路環吃個葡撻，下午回臺。
+            今天很Child。早上可以先去機場寄放行李，然後在氹仔逛逛，中午去路環吃個葡撻，下午回臺。
           </p>
         </div>
       </div>

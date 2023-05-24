@@ -16,3 +16,10 @@ export type CardProps = {
   image: string;
   description: string[];
 };
+
+export type InfoType = {
+  name: string;
+  description: string;
+  url: string;
+  id: string;
+};
