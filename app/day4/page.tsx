@@ -6,6 +6,7 @@ import {
   kowloonParagraph,
 } from "@/descriptions";
 import { DayInfo } from "@/type";
+import { Suspense } from "react";
 
 const day4HKData: DayInfo[] = [
   {
@@ -110,14 +111,15 @@ const Day4page = () => {
           >
             港島
           </a>
-
-          <Image
-            src="/day4/day4-all.png"
-            width={500}
-            height={500}
-            alt="day4-all"
-            className="rounded-md"
-          ></Image>
+          <Suspense fallback={<p>loading</p>}>
+            <Image
+              src="/day4/day4-all.png"
+              width={500}
+              height={500}
+              alt="day4-all"
+              className="rounded-md"
+            ></Image>
+          </Suspense>
         </div>
         {hkParagraph.map((paragraph) => (
           <p className="text-xl text-white/80" key={uuidv4()}>
