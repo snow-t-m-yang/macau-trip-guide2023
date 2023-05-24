@@ -138,7 +138,7 @@ const Navbar = () => {
         <ul
           className={`${
             state.calendar ? "right-0" : "right-[-100%]"
-          } absolute w-full  md:justify-center bg-secondary/90 flex justify-between p-3  bottom-[100%] duration-500 font-bold  divide-black/20 text-xl `}
+          } absolute w-full md:gap-7  md:justify-center bg-secondary/90 flex justify-between p-3 bottom-[100%] duration-500 font-bold  divide-black/20 text-xl `}
         >
           <li
             onClick={() => dayDispatch({ type: "day1" })}

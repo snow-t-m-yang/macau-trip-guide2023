@@ -63,7 +63,7 @@ const day4KLData: DayInfo[] = [
     place: "油麻地",
     image: "/day4/day4-youmadi.jpeg",
     description: [
-      "油麻地（英語：Yau Ma Tei），原名油蔴地，位於香港九龍半島西部，行政上屬於油尖旺區，區內的廣華醫院亦是中華民國第12、13任總統馬英九的出生地",
+      "油麻地（英語：Yau Ma Tei），原名油蔴地，位於香港九龍半島西部，行政上屬於油尖旺區，區內的廣華醫院亦是中華民國第12、13任總統馬英九的出生地。",
     ],
     id: uuidv4(),
   },
@@ -98,6 +98,8 @@ const Day4page = () => {
       <div className="min-h-[100dvh] flex flex-col justify-center gap-5">
         <h1 className="py-2 text-7xl bg-secondary text-primary">香港日</h1>
 
+        {/* Whole Map */}
+
         <div className="relative text-3xl text-white">
           <a
             className="absolute rounded-md px-1 py-2 left-[155px] top-[130px] bg-accent/80 backdrop-blur-xl"
@@ -111,15 +113,14 @@ const Day4page = () => {
           >
             港島
           </a>
-          <Suspense fallback={<p>loading</p>}>
-            <Image
-              src="/day4/day4-all.png"
-              width={500}
-              height={500}
-              alt="day4-all"
-              className="rounded-md"
-            ></Image>
-          </Suspense>
+
+          <Image
+            src="/day4/day4-all.png"
+            width={500}
+            height={500}
+            alt="day4-all"
+            className="rounded-md"
+          ></Image>
         </div>
         {hkParagraph.map((paragraph) => (
           <p className="text-xl text-white/80" key={uuidv4()}>
@@ -128,6 +129,7 @@ const Day4page = () => {
         ))}
       </div>
 
+      {/* 港島地圖 */}
       <div
         id="港島"
         className="min-h-[100dvh] flex flex-col justify-center gap-5"
@@ -187,6 +189,7 @@ const Day4page = () => {
         ))}
       </div>
 
+      {/* 港島景點介紹 */}
       {day4HKData.map((data) => (
         <div className="space-y-9" key={data.id}>
           <h2 id={data.place} className="text-5xl font-semibold text-secondary">
@@ -207,6 +210,7 @@ const Day4page = () => {
         </div>
       ))}
 
+      {/* 九龍地圖 */}
       <div
         id="九龍"
         className="min-h-[100dvh] flex flex-col justify-center gap-5"
@@ -266,6 +270,7 @@ const Day4page = () => {
         ))}
       </div>
 
+      {/* 九龍景點介紹 */}
       {day4KLData.map((data) => (
         <div className="space-y-9" key={data.id}>
           <h2 id={data.place} className="text-5xl font-semibold text-secondary">
