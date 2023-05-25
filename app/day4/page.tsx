@@ -114,7 +114,7 @@ const Day4page = () => {
             className="absolute rounded-md px-1 py-2 right-[120px] bottom-[35px] bg-accent/80 backdrop-blur-xl"
             href="#港島"
           >
-            港島
+            香港島
           </a>
 
           <Image
@@ -137,7 +137,7 @@ const Day4page = () => {
         id="港島"
         className="min-h-[100dvh] flex flex-col justify-start gap-5"
       >
-        <h1 className="py-2 text-center text-7xl text-secondary">港島</h1>
+        <h1 className="py-2 text-center text-7xl text-secondary">香港島</h1>
 
         <div className="relative text-sm text-white">
           <a
@@ -186,7 +186,7 @@ const Day4page = () => {
           ></Image>
         </div>
         {hkIslandParagraph.map((paragraph) => (
-          <p className="text-xl text-white" key={uuidv4()}>
+          <p className="text-2xl text-white" key={uuidv4()}>
             {paragraph}
           </p>
         ))}

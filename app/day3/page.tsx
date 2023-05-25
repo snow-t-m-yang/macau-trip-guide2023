@@ -8,12 +8,23 @@ import {
   weinisiParagraph,
   xinpujinParagraph,
   yongliParagraph,
+  zhuhai,
 } from "@/descriptions";
 import Day2Map from "../components/Day2Map";
 import { DayInfo } from "@/type";
 import Card from "../components/Card";
 
 const day3MorningData: DayInfo[] = [
+  {
+    place: "北山大院",
+    image:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118192.65161457972!2d113.42850853906246!3d22.220327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34017bb07b2752cf%3A0xe9e24cc8d3217166!2z54-g5rW35YyX5bGx!5e0!3m2!1sen!2stw!4v1684984777613!5m2!1sen!2stw",
+    description: [
+      "北山大院是一個集合了餐廳、咖啡廳、酒吧、藝術展覽、文創商品、農產品、農村體驗等多元化功能的複合式休閒農場。",
+      "建議直接在拱北口岸搭乘計程車前往",
+    ],
+    id: uuidv4(),
+  },
   {
     place: "新葡京",
     image:
@@ -61,6 +72,9 @@ const day3AfternoonData: DayInfo[] = [
   },
 ];
 
+const t = [1, 2, 3];
+console.log(t.slice(1));
+
 const Day3page = () => {
   return (
     <section className="flex flex-col justify-center px-3 gap-9">
@@ -75,13 +89,22 @@ const Day3page = () => {
           <h2 className="text-3xl font-bold">推薦行程：</h2>
           <div className="space-y-2 ">
             <p>
-              <span
-                style={{ filter: "drop-shadow(0 0 8px)" }}
-                className="text-3xl font-semibold"
-              >
-                上午
-              </span>
-              逛逛
+              <span className="text-3xl font-semibold">上午</span>
+              到珠海逛逛
+              <a className="italic text-secondary" href="#北山大院">
+                北山大院。
+              </a>
+            </p>
+            <p>
+              <span className="text-3xl font-semibold">中午</span>
+              在旅遊塔上吃
+              <a className="italic text-secondary" href="#旅遊塔">
+                自助餐。
+              </a>
+            </p>
+
+            <p>
+              <span className="text-3xl font-semibold">下午</span>打卡
               <a className="italic text-secondary" href="#新葡京">
                 新葡京、
               </a>
@@ -89,29 +112,8 @@ const Day3page = () => {
                 永利、
               </a>
               <a className="italic text-secondary" href="#美高梅">
-                美高梅。
+                美高梅、
               </a>
-            </p>
-            <p>
-              <span
-                style={{ filter: "drop-shadow(0 0 8px)" }}
-                className="text-3xl font-semibold"
-              >
-                中午
-              </span>
-              在旅遊塔上吃
-              <a className="italic text-secondary" href="#旅遊塔">
-                自助餐。
-              </a>
-            </p>
-            <p>
-              <span
-                style={{ filter: "drop-shadow(0 0 8px)" }}
-                className="text-3xl font-semibold"
-              >
-                下午
-              </span>
-              去路氹金光大道
               <a className="italic text-secondary" href="#威尼斯人">
                 威尼斯人、
               </a>
@@ -123,7 +125,39 @@ const Day3page = () => {
           </div>
         </div>
       </div>
-      {day3MorningData.map((data) => (
+      <Card
+        place={"珠海🇨🇳"}
+        image={"/islands/islands-zhuhai.jpeg"}
+        description={[zhuhai]}
+      />
+      {day3MorningData.slice(0, 1).map((data) => (
+        <div className="flex flex-col items-center space-y-9" key={data.id}>
+          <h2
+            id={data.place}
+            className="self-start text-5xl font-semibold text-secondary"
+          >
+            {data.place}
+          </h2>
+          <div>
+            <iframe
+              src={data.image}
+              width={370}
+              height={350}
+              loading="lazy"
+              className="rounded-md "
+            />
+          </div>
+          <ul className="space-y-5 text-xl">
+            {data.description.map((paragraph) => (
+              <li className="px-3 text-2xl italic" key={uuidv4()}>
+                <span className="not-italic">🇨🇳 </span>
+                {paragraph}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+      {day3MorningData.slice(1).map((data) => (
         <div className="flex flex-col items-center space-y-9" key={data.id}>
           <h2
             id={data.place}
