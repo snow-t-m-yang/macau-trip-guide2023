@@ -72,9 +72,6 @@ const day3AfternoonData: DayInfo[] = [
   },
 ];
 
-const t = [1, 2, 3];
-console.log(t.slice(1));
-
 const Day3page = () => {
   return (
     <section className="flex flex-col justify-center px-3 gap-9">
